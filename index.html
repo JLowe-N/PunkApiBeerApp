@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
-    <title>Document</title>
+    <title>Punk API Beer App</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
@@ -18,37 +19,80 @@
                     </div>
                     <div class="filter">
                         <form id="filterABV" class="filter-form">
-
                             <label for="abvALL">
                                 <input type="radio" name="filter-abv" class="filter-all" id="abvAll" value="all"
                                     checked />
                                 <span>All</span>
                             </label>
 
-                            <label for="abvALL">
-                                <input type="radio" name="filter-abv" class="beer" id="abvWeak" value="weak" checked />
+                            <label for="abvWeak">
+                                <input type="radio" name="filter-abv" class="beer" id="abvWeak" value="weak" />
                                 <span>Weak</span>
                             </label>
 
-                            <label for="abvALL">
-                                <input type="radio" name="filter-abv" class="beer" id="abvMedium" value="medium"
-                                    checked />
+                            <label for="abvMedium">
+                                <input type="radio" name="filter-abv" class="beer" id="abvMedium" value="medium" />
                                 <span>Medium</span>
                             </label>
 
-                            <label for="abvALL">
-                                <input type="radio" name="filter-abv" class="beer" id="abvStrong" value="strong"
-                                    checked />
+                            <label for="abvStrong">
+                                <input type="radio" name="filter-abv" class="beer" id="abvStrong" value="strong" />
                                 <span>Strong</span>
                             </label>
-
                         </form>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="card filter-card">
+            <div class="filter-container">
+                <div class="filter-text">
+                    <p>Hoppiness (IBU):</p>
+                </div>
+                <div class="filter">
+                    <form id="filterIBU" class="filter-form">
+                        <label for="ibuALL">
+                            <input type="radio" name="filter-ibu" class="filter-all" id="ibuAll" value="all" checked />
+                            <span>All</span>
+                        </label>
+
+                        <label for="ibuWeak">
+                            <input type="radio" name="filter-ibu" class="beer" id="ibuWeak" value="weak" />
+                            <span>Weak</span>
+                        </label>
+
+                        <label for="ibuMedium">
+                            <input type="radio" name="filter-ibu" class="beer" id="ibuMedium" value="medium" />
+                            <span>Medium</span>
+                        </label>
+
+                        <label for="ibuStrong">
+                            <input type="radio" name="filter-ibu" class="beer" id="ibuStrong" value="strong" />
+                            <span>Strong</span>
+                        </label>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="card filter-card">
+            <div class="filter-container">
+                <div class="filter-text">
+                    <p>Page: <span id="pageNumber"></span></p>
+                </div>
+                <div class="filter">
+                    <button id="prevPage" class="page-btn" disabled>
+                        <i class="far fa-caret-square-left"></i>
+                    </button>
+                    <button id="nextPage" class="page-btn" disabled>
+                        <i class="far fa-caret-square-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
     </div>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/js/all.min.js"></script>
+    <script src="index.js"></script>
 </body>
 
 </html>
