@@ -22,6 +22,14 @@ async function getBeers() {
                     <span>IBU: ${beer.ibu}</span>
                 </span>
             </div>
+            <div class='beer__content'>
+                <div class='beer__name'>${beer.name}</div>
+                <div class='beer__tagline'>${beer.tagline}</div>
+                <div class='beer__description'>${beer.description}</div>
+                <div class='beer__food-pairing'>
+                    Pair with: ${beer.food_pairing.join(', ')}
+                </div>
+            </div>
         </div>
        `;
     });
