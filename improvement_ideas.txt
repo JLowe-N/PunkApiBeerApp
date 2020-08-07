@@ -1,0 +1,6 @@
+1. Add beers-per-page functionality which is available to the API call
+2. Add additional filters for hop-type or perhaps filtering description terms.
+3. Needs a bug-fix for disabled next-page button if total available beers in the
+    API happens to be wholly divisble by beers-per-page.
+    Example: 250 beers, 25-per-page, allows pagination to continue 1-beyond
+    and shows a blank beer-list for that page
