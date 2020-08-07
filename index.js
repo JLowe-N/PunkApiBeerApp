@@ -1,9 +1,34 @@
 // variables
 const urlBase = "https://api.punkapi.com/v2/beers";
+const filterABV = document.getElementById("filterABV");
+let optionsABV = "";
+
+// filters
+filterABV.addEventListener("change", e => {
+    const value = e.target.value;
+
+    switch (value) {
+        case "all":
+            optionsABV = "";
+            break
+        case "weak":
+            optionsABV = "abv_lt=4.6"; // built-in to Punk API
+            break
+        case "medium":
+            optionsABV = "abv_gt=4.5&abv_lt=7.6"; // gt greater than, lt less than
+            break
+        case "strong":
+            optionsABV = "abv_gt=7.5";
+            break
+    }
+
+    getBeers();
+})
 
 async function getBeers() {
+    const url = urlBase + "?" + optionsABV
     // fetch & process
-    const beerPromise = await fetch(urlBase);
+    const beerPromise = await fetch(url);
     const beers = await beerPromise.json();
 
     // render data
