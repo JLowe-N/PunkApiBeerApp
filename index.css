@@ -52,18 +52,27 @@ header {
     margin-bottom: 1rem;
 }
 
+@media (min-width: 1300px) {
+    .filters {
+        grid-template-columns: 1fr 1fr 1fr;
+        margin-right: 1rem;
+    }
+}
+
 .filter-card {
     padding: 0.8rem;
 }
 
 .filter-container {
     padding: 0.4rem 0.8rem;
+    margin: 0 auto;
 }
 
 .filter-text p {
     color: var(--black);
     font-size: 1.3rem;
     padding: 0.3rem;
+    text-align: center;
 }
 
 .filter {
